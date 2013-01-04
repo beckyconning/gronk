@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Is animation?:</b>
+  <%= @graphic.is_animation? %>
+</p>
+
+<p>
+  <b>Frame width:</b>
+  <%= @graphic.frame_width %>
+</p>
+
+
+<%= link_to 'Edit', edit_graphic_path(@graphic) %> |
+<%= link_to 'Back', graphics_path %>

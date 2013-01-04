@@ -1,0 +1,35 @@
+<h1>Listing feeling_definitions</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Priority</th>
+    <th>Hidden?</th>
+    <th>Expressed daily?</th>
+    <th>Daily increase</th>
+    <th>Only in phase</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @feeling_definitions.each do |feeling_definition| %>
+  <tr>
+    <td><%= feeling_definition.name %></td>
+    <td><%= feeling_definition.description %></td>
+    <td><%= feeling_definition.priority %></td>
+    <td><%= feeling_definition.hidden? %></td>
+    <td><%= feeling_definition.expressed_daily? %></td>
+    <td><%= feeling_definition.daily_increase %></td>
+    <td><%= feeling_definition.only_in_phase_id %></td>
+    <td><%= link_to 'Show', feeling_definition %></td>
+    <td><%= link_to 'Edit', edit_feeling_definition_path(feeling_definition) %></td>
+    <td><%= link_to 'Destroy', feeling_definition, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Feeling definition', new_feeling_definition_path %>

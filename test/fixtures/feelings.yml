@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  feeling_definition_id: 1
+  ammount: 1
+  creature_id: 1
+  last_changed: 2011-11-15 12:25:14
+
+two:
+  feeling_definition_id: 1
+  ammount: 1
+  creature_id: 1
+  last_changed: 2011-11-15 12:25:14

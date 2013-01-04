@@ -1,0 +1,27 @@
+<h1>Listing phase_definitions</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Start time</th>
+    <th>End time</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @phase_definitions.each do |phase_definition| %>
+  <tr>
+    <td><%= phase_definition.name %></td>
+    <td><%= phase_definition.start_time %></td>
+    <td><%= phase_definition.end_time %></td>
+    <td><%= link_to 'Show', phase_definition %></td>
+    <td><%= link_to 'Edit', edit_phase_definition_path(phase_definition) %></td>
+    <td><%= link_to 'Destroy', phase_definition, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Phase definition', new_phase_definition_path %>

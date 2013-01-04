@@ -1,0 +1,49 @@
+<%= form_for(@feeling_definition) do |f| %>
+  <% if @feeling_definition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@feeling_definition.errors.count, "error") %> prohibited this feeling_definition from being saved:</h2>
+
+      <ul>
+      <% @feeling_definition.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br />
+    <%= f.text_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :hidden %><br />
+    <%= f.check_box :hidden? %>
+  </div>
+  <div class="field">
+    <%= f.label :expressed_daily %><br />
+    <%= f.check_box :expressed_daily? %>
+  </div>
+  <div class="field">
+    <%= f.label :starting_value %><br />
+    <%= f.text_field :starting_value %>
+  </div>
+  <div class="field">
+    <%= f.label :daily_increase %><br />
+    <%= f.text_field :daily_increase %>
+  </div>
+  <div class="field">
+    <%= f.label :only_in_phase_id %><br />
+    <%= f.text_field :only_in_phase_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

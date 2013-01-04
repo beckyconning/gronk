@@ -1,0 +1,26 @@
+<h1>Listing graphics</h1>
+
+<h2>Creature Graphic</h2>
+<%= image_tag @creature_graphic.file.url %>
+
+<h2>Feeling Graphics</h2>
+<table>
+  <tr>
+    <th>Graphic</th>
+    <th>Actions</th>
+  </tr>
+  <tr>
+    <% @feeling_definitions.each do |feeling_definition| %>
+    <td>
+      <% if feeling_definition.feeling_graphics.find_by_creature_definition(@creature_definition) %>
+    </td>
+    <td>Data</td>
+    </tr>
+</table>
+
+<h2>Action Graphics</h2>
+
+
+<br />
+
+<%= link_to 'New Graphic', new_graphic_path %>

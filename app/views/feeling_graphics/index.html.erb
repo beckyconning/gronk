@@ -1,0 +1,27 @@
+<h1>Listing feeling_graphics</h1>
+
+<table>
+  <tr>
+    <th>Creature definition</th>
+    <th>Graphic</th>
+    <th>Feeling definition</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @feeling_graphics.each do |feeling_graphic| %>
+  <tr>
+    <td><%= feeling_graphic.creature_definition_id %></td>
+    <td><%= feeling_graphic.graphic_id %></td>
+    <td><%= feeling_graphic.feeling_definition_id %></td>
+    <td><%= link_to 'Show', feeling_graphic %></td>
+    <td><%= link_to 'Edit', edit_feeling_graphic_path(feeling_graphic) %></td>
+    <td><%= link_to 'Destroy', feeling_graphic, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Feeling graphic', new_feeling_graphic_path %>

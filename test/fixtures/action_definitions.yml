@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  ends_phase?: false
+  gives_random_item?: false
+  required_item_id: 1
+  parent_action_id: 1
+
+two:
+  name: MyString
+  ends_phase?: false
+  gives_random_item?: false
+  required_item_id: 1
+  parent_action_id: 1

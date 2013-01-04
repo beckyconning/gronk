@@ -1,0 +1,29 @@
+<%= form_for(@feeling_graphic) do |f| %>
+  <% if @feeling_graphic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@feeling_graphic.errors.count, "error") %> prohibited this feeling_graphic from being saved:</h2>
+
+      <ul>
+      <% @feeling_graphic.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :creature_definition_id %><br />
+    <%= f.text_field :creature_definition_id %>
+  </div>
+  <div class="field">
+    <%= f.label :graphic_id %><br />
+    <%= f.text_field :graphic_id %>
+  </div>
+  <div class="field">
+    <%= f.label :feeling_definition_id %><br />
+    <%= f.text_field :feeling_definition_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

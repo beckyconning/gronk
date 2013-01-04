@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @creature_definition.name %>
+</p>
+
+<p>
+  <b>Graphic:</b>
+  <%= image_tag @creature_definition.graphic.file.url %>
+</p>
+
+<p>
+  <b>Sleepy phase:</b>
+  <%= @creature_definition.sleepy_phase_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_creature_definition_path(@creature_definition) %> |
+<%= link_to 'Back', creature_definitions_path %>
+

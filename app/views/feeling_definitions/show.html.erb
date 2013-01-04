@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @feeling_definition.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @feeling_definition.description %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%= @feeling_definition.priority %>
+</p>
+
+<p>
+  <b>Hidden?:</b>
+  <%= @feeling_definition.hidden? %>
+</p>
+
+<p>
+  <b>Expressed daily?:</b>
+  <%= @feeling_definition.expressed_daily? %>
+</p>
+
+<p>
+  <b>Daily increase:</b>
+  <%= @feeling_definition.daily_increase %>
+</p>
+
+<p>
+  <b>Only in phase:</b>
+  <%= @feeling_definition.only_in_phase_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_feeling_definition_path(@feeling_definition) %> |
+<%= link_to 'Back', feeling_definitions_path %>

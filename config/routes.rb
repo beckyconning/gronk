@@ -1,10 +1,33 @@
 Gronk::Application.routes.draw do
+  resources :feeling_graphics
+
+  resources :graphics
+
+  resources :phase_definitions
+
+  resources :action_graphics
+
+  resources :creature_definitions
+
+  resources :dream_definitions
+
+  devise_for :people
+
+  resources :creatures
+
+  resources :item_definitions
+
+  resources :action_definitions
+
+  resources :feeling_definitions
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
+  match 'admin' => 'admin#index'
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase

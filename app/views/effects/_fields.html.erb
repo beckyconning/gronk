@@ -1,0 +1,7 @@
+<li class="effect">
+  <%= f.label :feeling, "Feeling: " %>
+  <%= f.collection_select(:feeling_definition_id, @feeling_definitions, :id, :name, {:prompt => true}) %>
+  <%= f.label :ammount, "Ammount: " %>
+  <%= f.text_field :ammount %>
+  <%= remove_child_link "remove", f, "effect" %>
+</li>

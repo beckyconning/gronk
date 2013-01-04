@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @item_definition.name %>
+</p>
+<p>
+  <b>Graphic:</b>
+  <%= image_tag @item_definition.graphic.file.url %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_item_definition_path(@item_definition) %> |
+<%= link_to 'Back', item_definitions_path %>

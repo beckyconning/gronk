@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  graphic_id: 1
+  sleepy_phase_id: 1
+
+two:
+  name: MyString
+  graphic_id: 1
+  sleepy_phase_id: 1

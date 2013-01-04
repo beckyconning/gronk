@@ -1,0 +1,13 @@
+<div class="field">
+<%= f.label :file %><br />
+<%= f.file_field :file %>
+</div>
+<div class="field">
+<%= f.label "is_animation?" %><br />
+<%= check_box_tag "hideable_element_toggle_0", nil, false, :class => "hideable_element_toggle" %>
+</div>
+<div class="hideable_element" id="hideable_element_0">
+<div class="field">
+  <%= f.label :frame_width %><br />
+  <%= f.text_field :frame_width %>
+</div>

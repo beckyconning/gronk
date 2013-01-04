@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  description: MyString
+  priority: 1
+  hidden?: false
+  expressed_daily?: false
+  daily_increase: 1
+  only_in_phase_id: 1
+
+two:
+  name: MyString
+  description: MyString
+  priority: 1
+  hidden?: false
+  expressed_daily?: false
+  daily_increase: 1
+  only_in_phase_id: 1

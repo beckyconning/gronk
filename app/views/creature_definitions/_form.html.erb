@@ -1,0 +1,30 @@
+<%= form_for @creature_definition, :html => { :multipart => true } do |f| %>
+  <% if @creature_definition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@creature_definition.errors.count, "error") %> prohibited this creature_definition from being saved:</h2>
+
+      <ul>
+      <% @creature_definition.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <%= f.fields_for :graphic, @creature_definition.graphic do |graphic_fields| %>
+    <%= field_set_tag 'Graphic' do %>
+      <%= render :partial => "graphics/fields", :locals => { :f => graphic_fields } %> 
+    <% end %>
+  <% end %>
+  <div class="field">
+    <%= f.label :sleepy_phase_id %><br />
+    <%= collection_select(:creature_definition, :sleepy_phase_id, @phases, :id, :name, {:prompt => true}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

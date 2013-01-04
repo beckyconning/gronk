@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @action_definition.name %>
+</p>
+
+<p>
+  <b>Ends phase?:</b>
+  <%= @action_definition.ends_phase? %>
+</p>
+
+<p>
+  <b>Gives random item?:</b>
+  <%= @action_definition.gives_random_item? %>
+</p>
+
+<p>
+  <b>Parent action:</b>
+  <%= @action_definition.parent_action_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_action_definition_path(@action_definition) %> |
+<%= link_to 'Back', action_definitions_path %>

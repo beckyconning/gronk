@@ -1,0 +1,29 @@
+<%= form_for(@action_graphic) do |f| %>
+  <% if @action_graphic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@action_graphic.errors.count, "error") %> prohibited this action_graphic from being saved:</h2>
+
+      <ul>
+      <% @action_graphic.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :action_definition_id %><br />
+    <%= f.text_field :action_definition_id %>
+  </div>
+  <div class="field">
+    <%= f.label :creature_definition_id %><br />
+    <%= f.text_field :creature_definition_id %>
+  </div>
+  <div class="field">
+    <%= f.label :graphic_id %><br />
+    <%= f.text_field :graphic_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<h1>Listing dream_definitions</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Desctiption</th>
+    <th>Graphic</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dream_definitions.each do |dream_definition| %>
+  <tr>
+    <td><%= dream_definition.name %></td>
+    <td><%= dream_definition.desctiption %></td>
+    <td><%= dream_definition.graphic_id %></td>
+    <td><%= link_to 'Show', dream_definition %></td>
+    <td><%= link_to 'Edit', edit_dream_definition_path(dream_definition) %></td>
+    <td><%= link_to 'Destroy', dream_definition, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dream definition', new_dream_definition_path %>

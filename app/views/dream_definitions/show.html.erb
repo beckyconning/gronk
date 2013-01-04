@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @dream_definition.name %>
+</p>
+
+<p>
+  <b>Desctiption:</b>
+  <%= @dream_definition.desctiption %>
+</p>
+
+<p>
+  <b>Graphic:</b>
+  <%= @dream_definition.graphic_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_dream_definition_path(@dream_definition) %> |
+<%= link_to 'Back', dream_definitions_path %>

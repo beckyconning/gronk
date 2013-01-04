@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Action definition:</b>
+  <%= @action_graphic.action_definition_id %>
+</p>
+
+<p>
+  <b>Creature definition:</b>
+  <%= @action_graphic.creature_definition_id %>
+</p>
+
+<p>
+  <b>Graphic:</b>
+  <%= @action_graphic.graphic_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_action_graphic_path(@action_graphic) %> |
+<%= link_to 'Back', action_graphics_path %>

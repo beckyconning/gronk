@@ -1,0 +1,36 @@
+<%= form_for(@action_definition) do |f| %>
+  <% if @action_definition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@action_definition.errors.count, "error") %> prohibited this action_definition from being saved:</h2>
+
+      <ul>
+      <% @action_definition.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :ends_phase? %><br />
+    <%= f.check_box :ends_phase? %>
+  </div>
+  <div class="field">
+    <%= f.label :gives_random_item? %><br />
+    <%= f.check_box :gives_random_item? %>
+  </div>
+  <ul id="effects">
+    <% f.fields_for :effects do |effects_fields| %>
+      <%= render :partial => 'effects/fields', :locals => { :f => effects_fields } %>
+    <% end %>
+  </ul>
+  <p><%= add_child_link "Add effect", :effects %></p>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <%= new_child_fields_template(f, :effects)%>
+<% end %>

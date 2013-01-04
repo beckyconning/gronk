@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Creature definition:</b>
+  <%= @feeling_graphic.creature_definition_id %>
+</p>
+
+<p>
+  <b>Graphic:</b>
+  <%= @feeling_graphic.graphic_id %>
+</p>
+
+<p>
+  <b>Feeling definition:</b>
+  <%= @feeling_graphic.feeling_definition_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_feeling_graphic_path(@feeling_graphic) %> |
+<%= link_to 'Back', feeling_graphics_path %>

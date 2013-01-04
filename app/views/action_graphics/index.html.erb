@@ -1,0 +1,27 @@
+<h1>Listing action_graphics</h1>
+
+<table>
+  <tr>
+    <th>Action definition</th>
+    <th>Creature definition</th>
+    <th>Graphic</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @action_graphics.each do |action_graphic| %>
+  <tr>
+    <td><%= action_graphic.action_definition_id %></td>
+    <td><%= action_graphic.creature_definition_id %></td>
+    <td><%= action_graphic.graphic_id %></td>
+    <td><%= link_to 'Show', action_graphic %></td>
+    <td><%= link_to 'Edit', edit_action_graphic_path(action_graphic) %></td>
+    <td><%= link_to 'Destroy', action_graphic, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Action graphic', new_action_graphic_path %>

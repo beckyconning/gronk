@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  action_definition_id: 1
+  creature_definition_id: 1
+  graphic_id: 1
+
+two:
+  action_definition_id: 1
+  creature_definition_id: 1
+  graphic_id: 1

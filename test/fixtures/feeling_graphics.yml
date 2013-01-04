@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  creature_definition_id: 1
+  graphic_id: 1
+  feeling_definition_id: 1
+
+two:
+  creature_definition_id: 1
+  graphic_id: 1
+  feeling_definition_id: 1

@@ -1,0 +1,23 @@
+<h1>Listing item_definitions</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @item_definitions.each do |item_definition| %>
+  <tr>
+    <td><%= item_definition.name %></td>
+    <td><%= link_to 'Show', item_definition %></td>
+    <td><%= link_to 'Edit', edit_item_definition_path(item_definition) %></td>
+    <td><%= link_to 'Destroy', item_definition, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Item definition', new_item_definition_path %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @phase_definition.name %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%= @phase_definition.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%= @phase_definition.end_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_phase_definition_path(@phase_definition) %> |
+<%= link_to 'Back', phase_definitions_path %>

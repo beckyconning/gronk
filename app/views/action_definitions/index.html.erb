@@ -1,0 +1,29 @@
+<h1>Listing action_definitions</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Ends phase?</th>
+    <th>Gives random item?</th>
+    <th>Effects</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @action_definitions.each do |action_definition| %>
+  <tr>
+    <td><%= action_definition.name %></td>
+    <td><%= action_definition.ends_phase? %></td>
+    <td><%= action_definition.gives_random_item? %></td>
+    <td><%= action_definition.effects.count %></td>
+    <td><%= link_to 'Show', action_definition %></td>
+    <td><%= link_to 'Edit', edit_action_definition_path(action_definition) %></td>
+    <td><%= link_to 'Destroy', action_definition, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Action definition', new_action_definition_path %>

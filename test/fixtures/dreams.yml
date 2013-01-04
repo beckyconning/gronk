@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  dream_definition_id: 1
+  creature_id: 1
+
+two:
+  dream_definition_id: 1
+  creature_id: 1
